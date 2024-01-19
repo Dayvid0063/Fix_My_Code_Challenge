@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
- User Model - Code Fix ln 57
+ User Model
+ Code Fix
 """
 import hashlib
 import uuid
@@ -40,7 +41,7 @@ class User():
         if pwd is None or type(pwd) is not str:
             self.__password = None
         else:
-            self._password = hashlib.md5(pwd.encode()).hexdigest().lower()
+            self.__password = hashlib.md5(pwd.encode()).hexdigest().lower()
 
     def is_valid_password(self, pwd):
         """
@@ -52,9 +53,9 @@ class User():
         """
         if pwd is None or type(pwd) is not str:
             return False
-        if self.__password is None:
+        if self.password is None:
             return False
-        return hashlib.md5(pwd.encode()).hexdigest().lower() == self.__password
+        return hashlib.md5(pwd.encode()).hexdigest().lower() == self.password
 
 
 if __name__ == '__main__':
