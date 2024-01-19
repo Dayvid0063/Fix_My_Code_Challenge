@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-""" FizzBuzz Code Fix
+""" FizzBuzz
+    Code Fix
 """
 import sys
 
@@ -26,6 +27,7 @@ def fizzbuzz(n):
         else:
             tmp_result.append(str(i))
     print(" ".join(tmp_result))
+
 
 if __name__ == '__main__':
     if len(sys.argv) <= 1:
